@@ -1,7 +1,8 @@
 import React from 'react'
 import { FaRegEye, FaRegHeart, FaStar } from 'react-icons/fa'
+import { FaHeart } from "react-icons/fa";
 
-export default function ProductBox({key ,product, sale}) {
+export default function ProductBox({key ,product, sale, wishlist=false}) {
 
 
     function getStars(){
@@ -18,7 +19,7 @@ export default function ProductBox({key ,product, sale}) {
             </div> }
             <img alt={product.title} src={product.images[0]}/>
             <div className='icons'>
-                <div className='icon-wrap'><FaRegHeart className='icon'/></div>
+                {wishlist? <div className='icon-wrap'><FaHeart fill='#db4444'  className='icon'/></div> : <div className='icon-wrap'><FaRegHeart className='icon'/></div>}
                 <div className='icon-wrap'><FaRegEye className='icon'/></div>
             </div>
             <div className='cart'>

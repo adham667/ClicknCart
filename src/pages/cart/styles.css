@@ -1,0 +1,129 @@
+.cart{
+    padding: 50px 100px;
+}
+
+
+.cart .home-span{
+    color: gray;
+    font-weight: 100;
+}
+
+.cart .cart-container{
+    padding: 30px 20px;
+}
+
+.cart-container .item{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), /* Larger, softer shadow */
+              0 2px 4px rgba(0, 0, 0, 0.06);
+    height: 50px;
+    margin: 30px 0;
+    border-radius: 5px;
+}
+
+.cart-container .item .prod{
+    display: flex;
+    align-items: center;
+}
+
+
+.cart-container .item .quantity{
+    display: flex;
+    border: 1px solid black;
+    width: fit-content;
+    padding: 5px 8px;
+    border-radius: 5px;
+    align-items: center;
+}
+.cart-container .item .quantity .arrows{
+    display: flex;
+    flex-direction: column;
+    margin-left: 15px;
+}
+.cart-container .item .quantity .arrows > *{
+    cursor: pointer;
+}
+
+
+.cart img{
+    width: 50px;
+}
+
+
+
+.cart .check{
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+.cart .check .cupon input{
+    border: 1px solid black;
+    padding: 15px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-right: 15px;
+    font-weight: 100;
+}
+
+
+
+
+
+
+.cart .check .cupon button{
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: #db4444;
+    color: white;
+    font-weight: 100;
+    cursor: pointer;
+    border: none;
+}
+
+
+
+.cart .check .total h2{
+    margin: 0 0 15px 0;
+}
+
+.cart .check .total{
+    padding: 10px 20px;
+    border: 1px solid black;
+    border-radius: 8px;
+}
+
+.cart .check .total .details{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+
+.cart .check .total .details-row{
+    display: flex;
+    justify-content: space-between;
+    width: 400px;
+    
+}
+
+
+
+.cart .check .total button{
+    padding: 15px 40px;
+    font-size: 18px;
+    border-radius: 5px;
+    background-color: #db4444;
+    color: white;
+    font-weight: 100;
+    cursor: pointer;
+    border: none;
+}

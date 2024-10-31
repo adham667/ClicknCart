@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react'
 import ProductBox from './ProductBox'
 import './styles.css'
-export default function Section({word="hi", title="Our Products", limit=10, sortBy="", sale=false}) {
+export default function Section({word="hi", title="Our Products", limit=10, sortBy="", sale=false, viewmore=true, skip=0, wishlist=false}) {
   const [products, setProducts] = useState([])
-  const [loaded, setLoaded] = useState(0)
+  const [loaded, setLoaded] = useState(skip)
 
 
   function handleClick(){ 
@@ -16,7 +16,7 @@ export default function Section({word="hi", title="Our Products", limit=10, sort
   function getproducts(){
     
     return products.map((item, index)=>{
-      return <ProductBox key={index} product={item} sale={sale}/>
+      return <ProductBox key={index} product={item} sale={sale} wishlist={wishlist}/>
     })
   }
 
@@ -51,7 +51,7 @@ export default function Section({word="hi", title="Our Products", limit=10, sort
             getproducts()
           }
         </div>
-        <button onClick={handleClick} className='more'>View more</button>
+        {viewmore&&<button onClick={handleClick} className='more'>View more</button>}
     </div>
   )
 }
