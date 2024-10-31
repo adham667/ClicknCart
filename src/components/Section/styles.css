@@ -1,0 +1,151 @@
+.section{
+    position: relative;
+    margin: 100px 50px;
+}
+
+.section .word{
+    font-size: 16px;
+    color: #db4444;
+    font-weight: bold;
+    position: relative;
+    margin-left:20px ;
+}
+
+.section .word::before{
+    position: absolute;
+    content: '';
+    width: 15px;
+    background-color: #db4444;
+    height: 150%;
+    left: -20px;
+    top: -5px;
+    border-radius: 5px;
+}
+
+
+.section .grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+
+.section .title{
+    font-size: 36px;
+    margin-bottom: 60px;
+}
+
+
+
+.box .content{
+    position: relative;
+    overflow: hidden;
+    padding: 15px;
+    background-color: #f5f5f5;
+}
+
+.box .content .cart{
+    position: absolute;
+    text-align: center;
+    padding: 5px;
+    bottom: -40px;
+    left: 0;
+    width: 100%;
+    background-color: black;
+    color: white;
+    transition: all 0.5s ease;
+    cursor: pointer;
+}
+
+.box .content:hover .cart{
+    bottom: 0;
+}
+
+
+.box .content .sale{
+    background-color: #db4444;
+    /* font-weight: bold; */
+    color: white;
+    width: fit-content;
+    padding: 5px 10px;
+    border-radius:8px ;
+}
+.box img{
+    width: 100%;
+    height: 200px;
+}
+
+.box .icon{
+    font-size: 20px;
+    transition: all 0.3s;
+}
+.box .icon:hover{
+    fill: #db4444;
+
+}
+
+.box .icons{
+    position: absolute;
+    top: 10px;
+    right: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.box .icon-wrap{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background-color: white;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    cursor: pointer;
+    /* text-align: center; */
+}
+.box .info{
+    margin-top: 15px;
+}
+.box .info span{
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.box .info .price{
+    color: #db4444;
+    font-weight: normal;
+}
+
+.box .info .old{
+    color: gray;
+    text-decoration: line-through;
+    margin-left: 5px;
+}
+.box .info .details{
+    display: flex;
+}
+.box .info .stars{
+    margin: 0 10px;
+    margin-top: 10px;
+
+}
+
+.box .info .stars .star{
+    margin-left: 0px;
+}
+
+
+.section .more{
+    margin-top: 30px;
+    position: absolute;
+    cursor: pointer;
+    background-color: #db4444;
+    color: white;
+    border: none;
+    padding: 15px 60px;
+    border-radius: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 18px;
+}

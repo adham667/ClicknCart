@@ -1,0 +1,61 @@
+
+.features{
+    margin: 0 50px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.features .cell{
+    padding: 20px;
+    background-color: black;
+    color: white;
+    border-radius: 3px;
+    position: relative;
+    display: grid;
+    align-items: flex-end;
+    justify-content: flex-end;
+}
+
+.features .cell .text{
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    max-width: 250px;
+}
+
+.features .cell.cell.large .text{
+    max-width: 400px;
+}
+
+
+.features .cell .text h2{
+    font-size: 16px;
+}
+
+.features .cell .text p{
+    font-size: 13px;
+}
+
+.features .cell .text a{
+    text-decoration: underline;
+    color: white;
+}
+
+.features .cell.large{
+    grid-column: span 2;
+    grid-row: span 2;
+}
+
+.features .cell:last-child{
+    grid-column: span 2;
+}
+
+.features .cell img{
+    width: 200px;
+    /* justify-self: flex-end; */
+}
+.features .cell:last-child img{
+    width: 200px;
+    /* justify-self: flex-end; */
+}

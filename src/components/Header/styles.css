@@ -1,0 +1,77 @@
+.header{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+
+.header-menu{
+    list-style: none;
+    display: flex;
+}
+.header-menu li{
+    position: relative;
+    margin-right: 50px;
+    font-size: 20px;
+    cursor: pointer;
+}
+.header-menu li::after{
+    content: '';
+    position: absolute;
+    background-color: black;
+    height: 2px;
+    width: 0;
+    transition:width 0.4s ease;
+    left: 0;
+    bottom: -3px;
+}
+
+.header-menu li:hover::after{
+    width: 100%;
+}
+
+h1{
+    margin: 0;
+    font-size: 25px;
+}
+
+.menu{
+    display: flex;
+    align-items: center;
+}
+input{
+    border: none;
+    background-color: transparent;
+    outline: none;
+}
+.search{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    padding: 10px;
+    border-radius: 7px;
+    background-color: #f5f5f5;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.header .icon{
+    font-size: 30px;
+    margin-right: 20px;
+}
+
+.mybutton{
+    background-color: #db4444;
+    border: none;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 7px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.mybutton:hover{
+    background-color: #a73434;
+}
